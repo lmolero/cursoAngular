@@ -1,0 +1,20 @@
+<h1 style="text-align: center;">{{titulo}}</h1>
+<form style="text-align: center;" action="">
+  <input type="text" name="nombre" [(ngModel)]="nombre">
+  <input type="text" name="apellido" [(ngModel)]="apellido">
+  <input type="submit" value="registrar" (click)="registrarUsuario()">
+</form>
+<br>
+<!-- directiva if, si el usuario no clickea no se genera la etiqueta p -->
+<p style="text-align: center;" *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre de  {{nombre}} {{apellido}}</p>
+
+<!-- ng-template no se carga por defecto -->
+<ng-template #sinRegistrar>
+   <p>No hay nadie registrado!</p>
+</ng-template>
+<br/>
+<ul>
+  <li *ngFor="let entrada of entradas; let i=index"><span style="font-weight: bold;">{{entrada.titulo}}</span>.Entrada {{i+1}}
+  
+  </li>
+</ul>

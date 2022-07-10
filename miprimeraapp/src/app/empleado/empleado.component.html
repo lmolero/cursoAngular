@@ -1,0 +1,34 @@
+<p>Nombre del empleado: {{nombre}}</p>
+<p>Apellido del empleado: {{apellido}}</p>
+<!-- he declarado el atributo como private en la clase empleado -->
+<!-- <p>Edad del empleado: {{getEdad()+10}}</p> -->
+<p>Empresa del empleado: {{empresa}}</p>
+<!-- operador ternario -->
+<!-- <p>Edad del empleado: {{edad<18 ? "Menor de edad":"mayor de edad"}}</p> -->
+<!-- <p>Empresa del empleado: {{empresa.value}}</p> -->
+
+<br/>
+<br/>
+<label>Introduce la empresa:
+    <!-- # con esto se declara una variable de plantilla -->
+    <!-- [disabled]="habilitacionCuadro" asi se hace un binding -->
+    <!-- <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro"> -->
+
+    <input type="text" [(ngModel)]="empresa"> 
+  </label>
+  <!-- <input type="button" value="enviar" (click)="llamaEmpresa(empresa.value)"/> -->
+
+<br/>
+<br/>
+{{textoDeRegistro}}
+<br/>
+<!-- Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado()"/>
+
+{{getRegistroUsuario()}} -->
+
+<!-- ejemplo para usar eventos -->
+Registrado: <input type="radio" value = "si" name = "nRegistro" id = "registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado($event)"/>
+No Registrado: <input type="radio"  value = "no" name = "nRegistro" (click)="setUsuarioRegistrado($event)"/>
+
+{{getRegistroUsuario()}}
+

@@ -1,0 +1,14 @@
+arrancar servidor: 
+ng serve -o
+
+crear app: 
+ng new nombreApp
+
+generar component: 
+ng generate component nombre
+
+crea servicio:
+ng g s nombreServicio
+
+---para instalar librerias ---
+npm install (i) bootstrap --save
